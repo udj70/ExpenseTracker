@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Expense Tracker</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+            apiKey: "AIzaSyB1A3t3qPKbCmj67o4mRli0zqEaVO2c9v4",
+            authDomain: "expense-tracker-76e7e.firebaseapp.com",
+            databaseURL: "https://expense-tracker-76e7e.firebaseio.com",
+            projectId: "expense-tracker-76e7e",
+            storageBucket: "expense-tracker-76e7e.appspot.com",
+            messagingSenderId: "183631323118",
+            appId: "1:183631323118:web:9e3ae3263752a1d50d78ff",
+            measurementId: "G-18NDXW3492"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+        </script>
+        
+        
+        <!--css bootstrap-->    
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">        
+
+        
+        <!--javascript for bootstrap-->        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        
+        <style>
+            #loader { 
+            border: 12px solid #f3f3f3; 
+            border-radius: 50%; 
+            border-top: 12px solid #444444; 
+            width: 70px; 
+            height: 70px; 
+            animation: spin 1s linear infinite; 
+            } 
+
+            @keyframes spin { 
+                100% { 
+                    transform: rotate(360deg); 
+                } 
+            } 
+          
+            .center { 
+                position: absolute; 
+                top: 0; 
+                bottom: 0; 
+                left: 0; 
+                right: 0; 
+                margin: auto; 
+            } 
+
+        
+        </style>
+        
+    <body>
+        <div id="loader" class="center"></div>
+        <script> 
+            document.onreadystatechange = function() { 
+                if (document.readyState !== "complete") { 
+                    document.querySelector("body").style.visibility = "hidden"; 
+                    document.querySelector("#loader").style.visibility = "visible"; 
+                } else { 
+                    document.querySelector("#loader").style.display = "none"; 
+                    document.querySelector("body").style.visibility ="visible"; 
+                } 
+            }; 
+        </script> 
+        
+        
+    </body>
+
+
+</html>
